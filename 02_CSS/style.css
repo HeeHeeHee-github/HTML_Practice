@@ -1,0 +1,11 @@
+@import url(./heading.css);
+@import url(./span.css);
+
+p {
+  color: white;
+  background-color: red;
+}
+h3 {
+  background-color: orchid;
+  color: white;
+}
