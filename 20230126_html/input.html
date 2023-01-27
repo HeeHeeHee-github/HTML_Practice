@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input</title>
+  </head>
+  <body>
+    <select name="menu">
+      <optgroup label="coffee">
+        <option value="americano">아메리카노</option>
+        <option value="latte" selected>카페라떼</option>
+        <option value="cappuccino" disabled>카푸치노</option>
+      </optgroup>
+      <optgroup label="other">
+        <option value="americano">레모네이드</option>
+        <option value="latte">핫초코</option>
+        <option value="cappuccino">스무디</option>
+      </optgroup>
+    </select>
+    <br />
+    <input type="button" value="클릭해주세요." />
+    <button>Click</button>
+    <br />
+    <input type="text" value="고정값" />
+    <br />
+    <input type="password" />
+    <br />
+    <input type="checkbox" name="menu" value="coffee" />커피
+    <input type="checkbox" name="menu" value="tea" />차
+    <input type="checkbox" name="menu" value="latte" checked />라떼
+    <br />
+    <input type="radio" name="flash" value="F" />F 점멸
+    <input type="radio" name="flash" value="D" checked />D 점멸
+    <input type="radio" name="flash" value="T" />T 점멸
+    <br />
+    <input type="date" name="datetime" />
+    <br />
+    <input type="datetime-local" name="datetime" />
+    <hr />
+
+    <h1>Hee Cafe</h1>
+    <div id="주문자이름">
+      <span>주문자 이름을 입력해주세요.</span>
+      <input type="text" placeholder="이름을 입력해주세요." />
+      <hr />
+    </div>
+    <div id="단체주문">
+      <h2>단체 주문</h2>
+      <input type="checkbox" name="menu" value="coffee" />커피
+      <input type="checkbox" name="menu" value="tea" />차
+      <input type="checkbox" name="menu" value="latte" />라떼
+      <br />
+      <p>주문 날짜 입력</p>
+      <input type="date" name="date" />
+      <hr />
+    </div>
+    <div id="개별주문">
+      <h2>개별 주문</h2>
+      <input type="radio" name="coffee_menu" value="아이스 아메리카노" />아이스
+      아메리카노
+      <input type="radio" name="coffee_menu" value="아메리카노" />아메리카노
+      <input type="radio" name="coffee_menu" value="아이스 카페모카" />아이스
+      카페모카
+      <br />
+      <p>주문 날짜 및 시간 입력</p>
+      <input type="datetime-local" name="date" />
+      <hr />
+    </div>
+  </body>
+</html>
