@@ -1,0 +1,9 @@
+[disabled] {
+  color: aqua;
+  background-color: salmon;
+}
+
+[type="password"] {
+  color: darkkhaki;
+  background-color: palegreen;
+}

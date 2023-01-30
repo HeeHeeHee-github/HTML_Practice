@@ -1,0 +1,27 @@
+a:hover {
+  color: violet;
+}
+
+a:active {
+  background-color: darkseagreen;
+}
+
+input:focus {
+  background-color: lightsteelblue;
+}
+
+.fruits span:first-child {
+  color: red;
+}
+
+.fruits h3:last-child {
+  color: aqua;
+}
+
+.fruits *:nth-child(2n) {
+  color: burlywood;
+}
+
+.fruits *:not(span) {
+  color: red;
+}
