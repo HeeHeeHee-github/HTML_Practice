@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+      }
+      .class1 {
+        position: relative;
+        background-color: salmon;
+      }
+      .class1 > .eye {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        background-color: white;
+      }
+
+      .class1 > .eye::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: black;
+        top: 10px;
+        border-radius: 50%;
+      }
+      .class2 {
+        position: absolute;
+        top: 50px;
+        left: 70px;
+        background-color: lightpink;
+      }
+      .class3 {
+        position: absolute;
+        top: 70px;
+        left: 120px;
+        background-color: deeppink;
+      }
+      .class4 {
+        position: absolute;
+        top: 60px;
+        left: 170px;
+        background-color: mistyrose;
+      }
+      .class5 {
+        position: absolute;
+        top: 60px;
+        left: 230px;
+        background-color: palevioletred;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="class1">
+      <div class="eye"></div>
+    </div>
+    <div class="class2"></div>
+    <div class="class3"></div>
+    <div class="class4"></div>
+    <div class="class5"></div>
+  </body>
+</html>

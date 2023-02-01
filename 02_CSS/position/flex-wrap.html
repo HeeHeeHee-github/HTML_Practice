@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 700px;
+        height: 200px;
+        background-color: palevioletred;
+        margin-bottom: 10px;
+      }
+      .container2 {
+        display: flex;
+        justify-content: flex-end;
+        width: 700px;
+        height: 200px;
+        background-color: palevioletred;
+        margin-bottom: 10px;
+      }
+      .container3 {
+        display: flex;
+        justify-content: flex-start;
+        width: 700px;
+        height: 200px;
+        background-color: palevioletred;
+        margin-bottom: 10px;
+      }
+      .container4 {
+        display: flex;
+        justify-content: center;
+        width: 700px;
+        height: 200px;
+        background-color: palevioletred;
+        margin-bottom: 10px;
+      }
+      .container5 {
+        display: flex;
+        justify-content: space-between;
+        width: 700px;
+        height: 200px;
+        background-color: palevioletred;
+        margin-bottom: 10px;
+      }
+      .container6 {
+        display: flex;
+        justify-content: space-around;
+        width: 700px;
+        height: 200px;
+        background-color: palevioletred;
+        margin-bottom: 10px;
+      }
+      .container7 {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        width: 700px;
+        height: 300px;
+        background-color: palevioletred;
+        margin-bottom: 10px;
+      }
+      .container8 {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 700px;
+        height: 300px;
+        background-color: palevioletred;
+        margin-bottom: 10px;
+      }
+      .container9 {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        width: 700px;
+        height: 300px;
+        background-color: palevioletred;
+        margin-bottom: 10px;
+      }
+
+      .container10 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 700px;
+        height: 300px;
+        background-color: palevioletred;
+        margin-bottom: 10px;
+      }
+      .container11 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 700px;
+        height: 400px;
+        background-color: palevioletred;
+        margin-bottom: 10px;
+      }
+      .container12 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 700px;
+        height: 400px;
+        background-color: palevioletred;
+        margin-bottom: 10px;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: cadetblue;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+    </div> -->
+
+    <div class="container2">
+      <div>1 flex-end</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <div class="container3">
+      <div>1 flex-start</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <div class="container4">
+      <div>1 center</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <div class="container5">
+      <div>1 space-between</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+
+    <div class="container6">
+      <div>1 space-around</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <div class="container7">
+      <div class="class1">1 align-content : flex-start</div>
+      <div class="class2">2</div>
+      <div class="class3">3</div>
+      <div class="class4">4</div>
+      <div class="class5">5</div>
+      <div class="class6">6</div>
+      <div class="class7">7</div>
+      <div class="class8">8</div>
+      <div class="class9">9</div>
+    </div>
+
+    <div class="container8">
+      <div class="class1">1 align-content : center</div>
+      <div class="class2">2</div>
+      <div class="class3">3</div>
+      <div class="class4">4</div>
+      <div class="class5">5</div>
+      <div class="class6">6</div>
+      <div class="class7">7</div>
+      <div class="class8">8</div>
+      <div class="class9">9</div>
+    </div>
+    <div class="container9">
+      <div class="class1">1 align-content : flex-end</div>
+      <div class="class2">2</div>
+      <div class="class3">3</div>
+      <div class="class4">4</div>
+      <div class="class5">5</div>
+      <div class="class6">6</div>
+      <div class="class7">7</div>
+      <div class="class8">8</div>
+      <div class="class9">9</div>
+    </div>
+
+    <div class="container10">
+      <div>1 중앙정렬</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <div class="container11">
+      <div>
+        축을 column으로 flex-direction: column; justify-content: center;
+      </div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <div class="container12">
+      <div>
+        축을 column으로 flex-direction: column; justify-content: center;
+        align-items: content;
+      </div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container1 {
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: seagreen;
+        margin-bottom: 10px;
+      }
+      .container2 {
+        display: flex;
+        flex-direction: row;
+        background-color: seagreen;
+        margin-bottom: 10px;
+      }
+      .container3 {
+        display: flex;
+        flex-direction: column;
+        background-color: seagreen;
+        margin-bottom: 10px;
+      }
+      .container4 {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: seagreen;
+        margin-bottom: 10px;
+      }
+      .item1 {
+        width: 100px;
+        height: 50px;
+        background-color: darkorchid;
+      }
+
+      .item2 {
+        width: 150px;
+        height: 100px;
+        background-color: lightcoral;
+      }
+
+      .item3 {
+        width: 100px;
+        height: 200px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <div class="item1">1 row-reverse</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+    </div>
+    <div class="container2">
+      <div class="item1">1 row</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+    </div>
+    <div class="container3">
+      <div class="item1">1 column</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+    </div>
+    <div class="container4">
+      <div class="item1">1 column-reverse</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+    </div>
+  </body>
+</html>
