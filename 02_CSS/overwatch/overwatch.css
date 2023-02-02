@@ -1,6 +1,7 @@
 body {
   background-image: url(./images/bg.jpg);
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .container {
   margin-top: 50px;
@@ -44,7 +45,7 @@ body {
 }
 
 img {
-  display: flex;
+  display: block;
   margin: auto;
   max-width: 300px;
   width: 100%;
