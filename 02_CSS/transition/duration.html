@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        transition-duration: 2s; /* 전환 효과의 지속시간을 2초로 지정 */
+        margin-bottom: 10px;
+        transition-timing-function: ease-out; /*전환 효과의 타이밍 함수를 지정*/
+        transition-delay: 3s; /*3초 뒤에 시작하도록 대기시간을 지정*/
+        /* transition-property: width, height; 사실 잘 안씀 기본으로 all로 설정되어있음 */
+      }
+      .one {
+        background-color: lightblue;
+        transition-timing-function: ease-out;
+        /* transition-property: width, height; 사실 잘 안씀 기본으로 all로 설정되어있음 */
+      }
+
+      .one:hover {
+        width: 200px;
+        height: 200px;
+        background-color: lightpink;
+      }
+      .two {
+        background-color: khaki;
+        transition-timing-function: ease-in;
+        /* transition-property: width, height; 사실 잘 안씀 기본으로 all로 설정되어있음 */
+      }
+
+      .two:hover {
+        width: 400px;
+        height: 100px;
+        background-color: lightpink;
+      }
+
+      .three {
+        background-color: lightgreen;
+        transition-timing-function: ease-in;
+        transition-delay: 3s;
+        /* transition-property: width, height; 사실 잘 안씀 기본으로 all로 설정되어있음 */
+      }
+
+      .three:hover {
+        width: 400px;
+        height: 100px;
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+  </body>
+</html>
