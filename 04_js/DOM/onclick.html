@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="box1"
+      onclick="test()"
+      style="width: 100px; height: 100px; background-color: aquamarine"
+    >
+      1
+    </div>
+    <div
+      class="box2"
+      onclick="changeColor()"
+      style="width: 100px; height: 100px; background-color: bisque"
+    >
+      2
+    </div>
+    <div class="add">3</div>
+    <input type="text" />
+  </body>
+  <script>
+    function test() {
+      alert("클릭 !");
+    }
+
+    function changeColor() {
+      const box2 = document.querySelector(".box2");
+      box2.setAttribute(
+        "style",
+        "background-color:skyblue; width:100px; height:100px"
+      );
+    }
+
+    const addEventBox = document.querySelector(".add");
+    addEventBox.addEventListener("click", function () {
+      alert("세번째 div 클릭");
+    });
+
+    const inputEl = document.querySelector("input");
+    inputEl.addEventListener("focus", function () {
+      alert("focus on!");
+    });
+    inputEl.addEventListener("blur", function () {
+      alert("focus out!");
+    });
+  </script>
+</html>

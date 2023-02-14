@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+      }
+      .changeOrange {
+        background-color: orange;
+      }
+
+      .changeSkyblue {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">1</div>
+    <div class="box2" onclick="changeColor()">2</div>
+  </body>
+
+  <script>
+    const boxEl1 = document.querySelector(".box1");
+    const boxEl2 = document.querySelector(".box2");
+
+    boxEl1.addEventListener("click", function () {
+      if (boxEl1.classList.contains("changeOrange") === false) {
+        boxEl1.classList.remove("changeSkyblue");
+        boxEl1.classList.add("changeOrange");
+      } else {
+        boxEl1.classList.remove("changeOrange");
+        boxEl1.classList.add("changeSkyblue");
+      }
+    });
+
+    // box2 색상 변경 함수 onclick
+    function changeColor() {
+      if (boxEl2.classList.contains("changeOrange") === false) {
+        boxEl2.classList.remove("changeSkyblue");
+        boxEl2.classList.add("changeOrange");
+      } else {
+        boxEl2.classList.remove("changeOrange");
+        boxEl2.classList.add("changeSkyblue");
+      }
+    }
+  </script>
+</html>

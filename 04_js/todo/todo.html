@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./todo.js"></script>
+    <link rel="stylesheet" href="./todo.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Hee's Todo List</h1>
+    </div>
+    <div class="contents">
+      <div class="input-part">
+        <input type="text" class="input-task" />
+        <input type="button" class="input-btn" value="추가" />
+      </div>
+      <div class="list-part">
+        <ul class="todo-list"></ul>
+      </div>
+    </div>
+  </body>
+  <script>
+    const addBtn = document.querySelector(".input-btn");
+    const todoList = document.querySelector(".todo-list");
+    const inputTask = document.querySelector(".input-task");
+
+    addBtn.addEventListener("click", function () {
+      if (inputTask.value === "") {
+        inputTask.setAttribute("placeholder", "내용을 입력하세요.");
+      } else {
+        // 추가할 요소
+        const li = document.createElement("li");
+        const checkBtn = document.createElement("input");
+        const deleteBtn = document.createElement("button");
+        deleteBtn.innerText = "❌";
+        // deleteBtn.textContent = "❌";
+        checkBtn.setAttribute("type", "checkbox");
+
+        // li 태그안에 입력한 내용의 값을 넣기
+        li.innerText = inputTask.value;
+
+        li.prepend(checkBtn);
+        todoList.append(li);
+        li.append(deleteBtn);
+
+        // 입력한 내용 사라지게 하기
+        inputTask.value = "";
+
+        checkBtn.addEventListener("click", function () {
+          if (checkBtn.checked === true) {
+            checkBtn.parentNode.style.textDecoration = "line-through";
+          } else {
+            checkBtn.parentNode.style.textDecoration = "none";
+          }
+        });
+
+        deleteBtn.addEventListener("click", function () {
+          deleteBtn.parentNode.remove();
+        });
+      }
+    });
+  </script>
+</html>

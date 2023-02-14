@@ -5,7 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="./test/date-Day_test.js"></script>
+    <!-- <script src="./test/date-Day_test.js"></script> -->
   </head>
-  <body></body>
+  <body>
+    <!-- <ul>
+      <li class="orange">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li id="skyblue">6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul> -->
+    <div class="box">box</div>
+    <input type="text" />
+
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <script>
+      const boxEl = document.querySelector(".box");
+      const inputEl = document.querySelector("input");
+
+      //setAttribute
+      boxEl.setAttribute("style", "background:orange; height:300px");
+      inputEl.setAttribute("placeholder", "통합검색");
+
+      //textContent
+      boxEl.textContent = "HEE";
+      console.log(boxEl.textContent);
+
+      //innerHTML, innerText
+      const divOneEl = document.querySelector(".div1");
+      const diveTwoEl = document.querySelector(".div2");
+
+      divOneEl.innerHTML = "<button>test</button>";
+      divOneEl.innerText = "<button>test</button>";
+    </script>
+
+    <!-- <script src="./test/classList_test.js"></script> -->
+  </body>
 </html>
