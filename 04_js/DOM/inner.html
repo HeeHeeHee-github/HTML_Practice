@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+  </body>
+  <script>
+    let boxEl1 = document.querySelector(".box1");
+    let boxEl2 = document.querySelector(".box2");
+
+    boxEl1.innerHTML = "<button>test</button>";
+    boxEl2.innerText = "<button>test</button>";
+
+    console.log(boxEl1);
+    console.log(boxEl2);
+  </script>
+</html>
