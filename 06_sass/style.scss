@@ -1,0 +1,116 @@
+@import "reset";
+@import "mixin";
+
+$body-bg: #111;
+$wrap-border: #ddd;
+$wrap__item-bg: #222;
+$wrap__item_h2: #333;
+$btn-bg: orange;
+$btn-font: white;
+$wrap__item-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+$wrap__item_p: #777;
+
+body {
+  background-color: $body-bg;
+}
+
+// Main
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 100px;
+  border: 2p solid $wrap-border;
+  perspective: 600px;
+
+  &:hover {
+    .item {
+      transform: translateY(0px) rotateY(0deg);
+      opacity: 1;
+    }
+  }
+
+  .item {
+    width: 300px;
+    padding: 30px;
+    background-color: $wrap__item-bg;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: $wrap__item-shadow;
+    transform: translateY(100px) rotateY(180deg);
+    transition: 0.6s;
+    opacity: 0;
+
+    // &:nth-child(1) {
+    //   transition-delay: 0.1s;
+    // }
+    // &:nth-child(2) {
+    //   transition-delay: 0.2s;
+    // }
+    // &:nth-child(3) {
+    //   transition-delay: 0.3s;
+    // }
+    // &:nth-child(4) {
+    //   transition-delay: 0.4s;
+    // }
+
+    // @for $i from 1 to 5 {
+    //   &:nth-child(#{$i}) {
+    //     transition-delay: $interval * $i;
+    //   }
+    // }
+
+    &:hover {
+      background-color: cadetblue;
+    }
+
+    h2 {
+      font: bold 30px/1 "arial";
+      margin-bottom: 20px;
+      @if $wrap__item-bg == #fff {
+        color: black;
+      } @else {
+        color: white;
+      }
+      // color: $wrap__item_h2;
+    }
+
+    p {
+      font: normal 16px/1.5 "arial";
+      @if $wrap__item-bg == #fff {
+        color: $wrap__item_p;
+      } @else {
+        color: white;
+      }
+      // color: $wrap__item_p;
+    }
+
+    $bgColors: (orange, hotpink, aqua, lightgreen);
+    $interval: 0.3s;
+    @each $el in $bgColors {
+      $index: index(
+        $list: $bgColors,
+        $value: $el,
+      );
+      &:nth-child(#{$index}) {
+        transition-delay: $interval * $index;
+        a {
+          @include button($bg-color: $el);
+        }
+      }
+    }
+    a {
+      // display: block;
+      // width: 100px;
+      // height: 30px;
+      // border-radius: 15px;
+      // background-color: $btn-bg;
+      // color: $btn-font;
+      // text-align: center;
+      // font: bold 16px/30px;
+      // margin-top: 20px;
+
+      @include button($width: 100%, $bg-color: $btn-bg, $font-color: $btn-font);
+    }
+  }
+}
